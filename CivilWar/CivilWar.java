@@ -1,3 +1,4 @@
+package CivilWar;
 import java.util.*;
 
 public class CivilWar {

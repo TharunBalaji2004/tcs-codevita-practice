@@ -1,3 +1,4 @@
+package CountingRocks;
 import java.util.Scanner;   
 
 public class CountingRocks {

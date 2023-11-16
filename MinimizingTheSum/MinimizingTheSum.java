@@ -1,3 +1,4 @@
+package MinimizingTheSum;
 import java.util.*;
 
 public class MinimizingTheSum {

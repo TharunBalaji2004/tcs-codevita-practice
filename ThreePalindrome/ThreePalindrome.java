@@ -1,3 +1,4 @@
+package ThreePalindrome;
 import java.util.*;
 
 public class ThreePalindrome {

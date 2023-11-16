@@ -1,3 +1,4 @@
+package PhilalAndCoins;
 import java.util.*;
 
 public class PhilalAndCoins {
