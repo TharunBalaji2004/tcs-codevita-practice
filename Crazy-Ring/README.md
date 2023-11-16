@@ -20,19 +20,29 @@ Sample Input and Output
 
 Testcases:
 
+```
 5 5
 5 20
-20 5 	
+20 5 
+
+Ans
 292.79 
+```
 
-
+```
 5 5
 5 5
 5 5 	
+
+Ans
 Not Possible
+```
 
-
+```
 5 8
 4 3
 2 4.34534554521 	
+
+Ans
 17.91
+```
