@@ -27,25 +27,25 @@ public class Chakravyuh {
         int endCol = n-1;
         int count = 1;  
 
-        while(startCol <= endRow && startRow <= endCol){
-            for(int i=startRow; i<=endCol; i++)
-               matrix[startCol][i] = count++;
-            startCol++;
+        while(startCol <= endCol && startRow <= endRow){
+            for(int i=startCol; i<=endCol; i++)
+               matrix[startRow][i] = count++;
+            startRow++;
 
-            for(int i=startCol; i<=endRow; i++)
+            for(int i=startRow; i<=endRow; i++)
                 matrix[i][endCol] = count++;
             endCol--;
 
-            if (startCol <= endRow){
-                for(int i=endCol; i>=startRow; i--)
+            if (startCol <= endCol){
+                for(int i=endCol; i>=startCol; i--)
                     matrix[endRow][i] = count++;
                 endRow--;
             }
 
-            if (startRow <= endCol){
-                for(int i=endRow; i>=startCol; i--)
-                    matrix[i][startRow] = count++;
-                startRow++;
+            if (startRow <= endRow){
+                for(int i=endRow; i>=startRow; i--)
+                    matrix[i][startCol] = count++;
+                startCol++;
             }
         }
 
@@ -66,3 +66,4 @@ public class Chakravyuh {
         }   
     }
 }
+
