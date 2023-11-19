@@ -1,7 +1,10 @@
-Question -: College Admissions are done by allocating a seat to a student based on his/her preference and percentage scored. Students are asked to provide three colleges of their choice. Each college will have a quota of S seats (S can vary per college). Admissions will be processed based on ‘percentage scored’ and availability of seats as per ‘choice of preference’.
+## Problem Description
+
+**Question -:** College Admissions are done by allocating a seat to a student based on his/her preference and percentage scored. Students are asked to provide three colleges of their choice. Each college will have a quota of S seats (S can vary per college). Admissions will be processed based on ‘percentage scored’ and availability of seats as per ‘choice of preference’.
 Admissions will first be granted based on percentage scored. If there is a tie, on percentage scored, then admission will be granted based on student Id i.e. student with a lower Id will be given preference over student with higher Id.
 In Round 1 all admissions will be processed based on students’ choice i.e. if a student is eligible to get admitted in any of the 3 colleges, s/he will have to be admitted. Similarly, it will be binding on the student to get admitted. Obviously, first choice will get first preference, second choice will get second preference and so on.
 Round 2 will process all the remaining students (those who didn’t get admitted in Round 1) according to their percentages and in order of maximum availability of seats in colleges.
+
 For E.g.
 <college, vacant seats>
 C-1, 15
@@ -16,26 +19,26 @@ Here, now Student-88 will get admitted to C-1.
 Now, Student-103 could potentially get admitted to C-1 or C-22. Suppose we mandate that ties should be broken in favour of college with least ID, then again Student-103 will get admitted to C-1. Now C-1 has 13 vacant seats whereas C-22 has 14 vacant seats.
 Next, Student-128 will get admitted to C-22. Now again C-1, C-22 and C-32 have 13 vacant seats. So, the next three students (hypothetically) will get admitted to C-1, C-22 and C-32 respectively.
 
-Constraints :
+**Constraints :**
 3<=C<=25
 1<=N<=10000
 1<=S<=120
 
-Input :
+**Input :**
 First line contains two integers viz. C and N where,
 C is number of colleges and
 N is number of students
 Second line contains C spaced integers denoting S1,S2 and so on till SC – where S1 is number of seats in college 1, S2 in college 2 etc.
 Next, N lines comprise of 5 data items, viz <student-id, percentage, Choice 1, Choice 2, Choice 3>
 
-Output :
+**Output :**
 Display the cut-off percentages of all the colleges in sorted order (descending order). Display the college with no students in last line as ‘n/a.
 The output format is <college cut-off_percentage>
 For better understanding go through the Examples given below.
 
-Time Limit : 1 secs
+**Time Limit :** 1 secs
 
-Example 1 :
+**Example 1 :**
 Input :
 3 5
 3 1 2
@@ -56,7 +59,7 @@ Both student’s priority is college 2 as second choice, but Student-2 is admitt
 Now there are only 0, 0, 2 seats left in college 1, college 2 and college 3 respectively. So, Student-3 is admitted to college 3 based on his preference. Here there is no need of round 2 as all students are admitted to colleges and none of them are awaiting admissions.
 Now, C-1 = [Student-1, Student-3, Student-4], C-2=[Student-2], C-3=[Student-5]. For C-1, Cut-off is 80.83 because Student with least percentage in C-1 is Student-4. Similarly for C-3, it is 41.23 Display these Cut-off in sorted order.
 
-Example 2 :
+**Example 2 :**
 Input :
 5 5
 2 1 1 1 2
