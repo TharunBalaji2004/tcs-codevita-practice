@@ -36,17 +36,15 @@ public class Chakravyuh {
                 matrix[i][endCol] = count++;
             endCol--;
 
-            if (startCol <= endCol){
-                for(int i=endCol; i>=startCol; i--)
-                    matrix[endRow][i] = count++;
-                endRow--;
-            }
+           
+            for(int i=endCol; i>=startCol; i--)
+                matrix[endRow][i] = count++;
+            endRow--;
+            
 
-            if (startRow <= endRow){
-                for(int i=endRow; i>=startRow; i--)
-                    matrix[i][startCol] = count++;
-                startCol++;
-            }
+            for(int i=endRow; i>=startRow; i--)
+                matrix[i][startCol] = count++;
+            startCol++;
         }
 
         for(int i=0; i<n; i++){
@@ -59,11 +57,13 @@ public class Chakravyuh {
             System.out.println();
         }
 
-        System.out.println("Total Power points: " + powerPoints.size());    
+        System.out.println("\nTotal Power points: " + powerPoints.size());    
 
         for(int[] point : powerPoints){
             System.out.println(point[0] + ", " + point[1]);
         }   
+
+        System.out.println();
     }
 }
 
