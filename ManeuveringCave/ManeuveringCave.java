@@ -8,21 +8,33 @@ public class ManeuveringCave {
 
         int t = sc.nextInt();
 
-        while (t-- > 0){
+        while (t-- > 0) {
             int rows = sc.nextInt();
             int cols = sc.nextInt();
 
-            int res = findWays(rows, cols);
+            int res = findWaysDP(rows, cols);
         
             System.out.println(res);
         }
         sc.close();
     }
 
-    // (row-1, col) represents bottom to top 
-    // (row, col-1) represents right to left
-    private static int findWays(int row, int col) {
-        if (row == 1 || col == 1) return 1;
-        return findWays(row - 1, col) + findWays(row, col - 1);
+    private static int findWaysDP(int rows, int cols) {
+        int[][] dp = new int[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            dp[i][0] = 1;
+        }
+        for (int j = 0; j < cols; j++) {
+            dp[0][j] = 1;
+        }
+
+        for (int i = 1; i < rows; i++) {
+            for (int j = 1; j < cols; j++) {
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+            }
+        }
+
+        return dp[rows - 1][cols - 1];
     }
 }
